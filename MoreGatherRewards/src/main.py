@@ -126,7 +126,7 @@ if __name__ == "__main__":
     script_dir = Path(__file__).absolute().parent
 
     parser = ArgumentParser(
-        description="Multiply the resource and experience gain for some items in the Gathers table by a factor"
+        description="Multiply the resource and experience gain for some items in the Gathers table by a factor, and fishing experience gain in the Fishing table"
     )
 
     parser.add_argument(
@@ -156,19 +156,19 @@ if __name__ == "__main__":
         metavar="INT",
         default=5,
         type=int,
-        help="[default: 5] Multiplicative factor experience gain on fishing",
+        help="[default: 5] Multiplicative factor for experience gain on fishing",
     )
     parser.add_argument(
         "--uassetgui",
         required=True,
-        metavar="PATH",
+        metavar="FILE",
         type=Path,
         help="Path to UAssetGUI (https://github.com/atenfyr/UAssetGUI)",
     )
     parser.add_argument(
         "--repak",
         required=True,
-        metavar="PATH",
+        metavar="FILE",
         type=Path,
         help="Path to trumank/repak (https://github.com/trumank/repak)",
     )
