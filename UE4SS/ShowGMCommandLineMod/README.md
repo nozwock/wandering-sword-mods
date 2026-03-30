@@ -2,7 +2,7 @@
 A mod that unlocks the in-game dev-console.
 
 ## Usage
-Press the **~** (Tilde) key to open the console.
+Press the **F1** key to open the console.
 
 ### Commands
 These are some of the commands:
@@ -15,6 +15,9 @@ addmoney    <Money>
 addsexp     <MartialPoints>         Add martial points to the player
 setspeed    <Speed>                 Set the player's walk/run speed, can get reset with some world interactions
 ```
+
+The complete list of console commands available seems to be in GHCommand under
+the `JH/JHNeoUI_Common/Modules` of the game's pak archvie.
 
 ### Id List
 - [Wandering Sword Item Ids v1.23.26](https://pastebin.com/9GmwrMbh)
@@ -29,3 +32,5 @@ setspeed    <Speed>                 Set the player's walk/run speed, can get res
     Wandering_Sword/Content/Localization/Items道具表/en/Items道具表.locres
     Wandering_Sword/Content/Localization/Skills技能表/en/Skills技能表.locres
     ```
+
+    With v1.24.28, it's Buff与道具 instead of Items道具表.
