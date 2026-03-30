@@ -1,5 +1,10 @@
 local UEHelpers = require("UEHelpers")
 
+
+-- See Mods/Keybinds/Scripts/main.lua for other valid keys that can be used
+local consoleToggleKey = Key.F1
+
+
 ---@param msg string
 local function Log(msg)
 	print("[ShowGMCommandLine] " .. msg)
@@ -27,11 +32,12 @@ local function RegisterMod(InitCallback)
 	end
 end
 
+
 RegisterMod(function()
 	local JHNeoUISubsystem = StaticFindObject("/Script/JH.Default__JHNeoUISubsystem")
 	assert(JHNeoUISubsystem:IsValid())
 
-	RegisterKeyBind(Key.OEM_THREE --[[Tidle]], function()
+	RegisterKeyBind(consoleToggleKey, function()
 		ExecuteInGameThread(function()
 			JHNeoUISubsystem:ShowGMCommandLine()
 		end)
